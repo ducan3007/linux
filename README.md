@@ -29,7 +29,7 @@
 Dòng đầu là thông tin của user root, tiếp theo là thông tin các user khác trong hệ thống, cuối cùng là tài khoản người dùng
 
 `root` : `x` : `0` : `0` : `root` : `/root` : `/bin/bash`
-
+```
 1. Tên của User : root
 2. Mật khẩu đã được mã hóa, lưu ở trong /etc/shadow
 3. User ID: 0
@@ -37,7 +37,7 @@ Dòng đầu là thông tin của user root, tiếp theo là thông tin các use
 5. Mô tả về người dùng (commnet): root
 6. Đường dẫn thư mục cua user: /root
 7. Loại Shell sẽ hoạt động khi user login: /bin/bash
-
+```
 ### File chứa thông tin mật khẩu của tất cả người dùng `/etc/shadow`, chỉ có root mới quyền đọc - 8 trường
 
 bean:$1$m/VeowYl$11qShSek/Kh7GQ1:18888:0:99999:7:::
@@ -50,7 +50,7 @@ bean:$1$m/VeowYl$11qShSek/Kh7GQ1:18888:0:99999:7:::
 + Quyền chính thức của file = Umask + BS
 + BS của một file bất kỳ là: 666
 
-
+```
 + 7 = read write execute  `rwx`
 + 6 = read write          `rw-
 + 5 = read execute        `r-x`
@@ -59,7 +59,7 @@ bean:$1$m/VeowYl$11qShSek/Kh7GQ1:18888:0:99999:7:::
 + 2 = write               `-w-`
 + 1 = execute             `--x`
 + 0 = None
-
+```
 
 
 
