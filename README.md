@@ -25,11 +25,12 @@
 + `rw-`: thứ 3 là quyền dành cho người dùng khác
 
 ### Liên kết
-+ `hard-link`: 
++ `hard-link`: khi xóa file a thì file b vẫn còn
+- `hardlink` not allowed for directory
 
 
-+ `soft-link`:
-
++ `symbolic-link`: là một file trỏ đến
+- giống `Shortcut` trong window
 
 ## Chỉ số inode: 
 + Cách xem chỉ ố inode: `ls -i` là chỉ số 
@@ -100,6 +101,15 @@ Kết hợp với nhau: chmod u+w,g=r,o=x a.txt
 -R, --recursive : directory recursively 
 
 `Process giao tiếp với kernal bằng system call`
+
+## NANO
++ `Ctrl+O`: lưu thay đổi
++ `Ctrl+X`: thoát
++ `Ctrl+K`: cắt một dòng đơn
++ `Ctrl+U`: dán dòng đó
+
+##VI
+
 
 
 
