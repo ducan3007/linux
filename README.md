@@ -3,6 +3,16 @@
 
 + `ls` : Liệt kê nội dung thư mục
    + `ls -l` : Gồm 7 trường:  `- rw- rw- r--.` `1` `Owner` `Group` `1024`  `Feb 26 07:08` `file1`
+  
+ ```
+ 1. Quyền của user, group other
+ 2. số liên kết
+ 3. Owner của file
+ 4. Group của file
+ 5. Size
+ 6. Last modified date
+ 7. Name
+ ```
    
 
 ### Quyền truy cập `- rw- rw- r--`
@@ -15,15 +25,23 @@
 + `rw-`: thứ 3 là quyền dành cho người dùng khác
 
 ### Liên kết
-+ `hard-link`:  
++ `hard-link`: 
+
+
 + `soft-link`:
 
 
-### Chỉ số inode: 
-
+## Chỉ số inode: 
 + Cách xem chỉ ố inode: `ls -i` là chỉ số 
 
+Trong inode chứa các thông tin sau:
++ Dung lượng file tính bằng bytes
++ Device ID: id của device lưu file (sda, sda1)
++ User ID: id của owner
++ Group ID: id của nhóm 
++ File mode
 
+   
 ### File chứa thông tin người dùng `/etc/passwd` - 7 trường
 
 Dòng đầu là thông tin của user root, tiếp theo là thông tin các user khác trong hệ thống, cuối cùng là tài khoản người dùng
@@ -61,10 +79,27 @@ bean:$1$m/VeowYl$11qShSek/Kh7GQ1:18888:0:99999:7:::
 + 0 = None
 ```
 
+### chmod options permissions file name
+user -> group -> other
+
+[options]
+`+` = add
+chmod u+x a.txt : cấp quyền exec cho a.txt
+
+`-` = remove
+chmod g-x a.txt
 
 
+`=` = apply
 
+Kết hợp với nhau: chmod u+w,g=r,o=x a.txt
 
+[flags]
+
+-f, --silent, --quiet :  Suppress most error messages.
+-R, --recursive : directory recursively 
+
+`Process giao tiếp với kernal bằng system call`
 
 
 
